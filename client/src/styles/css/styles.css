@@ -23,3 +23,28 @@ span {
   margin-top: 2rem;
   font-size: 1.5rem;
 }
+.modal_show,
+.modal_hide {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 47, 47, 0.63);
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_show h1,
+.modal_hide h1 {
+  font-size: 20rem;
+}
+.modal_show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal_hide {
+  visibility: hidden;
+  opacity: 0;
+}

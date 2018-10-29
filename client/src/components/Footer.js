@@ -17,6 +17,9 @@ const Footer = () => {
         </p>
       </Col>
       <Col foot_text>
+        <h3>
+          <span>"I Hate LFG" - Autoimmune, Founder</span>
+        </h3>
         <h4>Copyright Serrow @ 2018</h4>
       </Col>
       <Col foot_text>

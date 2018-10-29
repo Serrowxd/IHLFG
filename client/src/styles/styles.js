@@ -146,8 +146,12 @@ export const Col = styled.div`
         }
       }
 
+      h3 {
+        font-size: 2rem;
+      }
+
       h4 {
-        padding-top: 4rem;
+        margin-top: 0.5rem;
       }
     `};
 `;
