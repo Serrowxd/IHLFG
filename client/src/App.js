@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Styles
 import { GlobalContainer, Col, Row } from './styles/styles';
 // Imports
-import { Navigation } from './reducer';
+import { Navigation, Footer } from './reducer';
 // Imgs
 import brainlet from './assets/brainletultima.png';
 import serrow from './assets/serrowattak.png';
@@ -75,6 +75,8 @@ class App extends Component {
             </Col>
           </Row>
         </Col>
+
+        <Footer />
       </GlobalContainer>
     );
   }
