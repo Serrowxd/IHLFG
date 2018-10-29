@@ -1,0 +1,9 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+.main_header {
+  background-image: url(../../assets/yeet30.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
