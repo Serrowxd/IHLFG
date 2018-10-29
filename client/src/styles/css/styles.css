@@ -1,9 +1,25 @@
 html {
   font-family: 'Roboto', sans-serif;
 }
+span {
+  color: #18d7dd;
+}
 .main_header {
   background-image: url(../../assets/yeet30.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.input_search_header {
+  width: 30rem;
+  height: 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.input_search_button {
+  width: 15rem;
+  height: 3rem;
+  align-self: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }

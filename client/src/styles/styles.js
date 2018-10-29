@@ -61,6 +61,12 @@ export const Row = styled.div`
         font-size: 2rem;
       }
     `};
+  /* Main Body Text - Row */
+  ${props =>
+    props.main_body_text &&
+    css`
+      justify-content: space-around;
+    `};
 `;
 
 export const Col = styled.div`
@@ -80,6 +86,41 @@ export const Col = styled.div`
       form {
         display: flex;
         flex-direction: column;
+      }
+    `};
+  /* Main Body */
+  ${props =>
+    props.body_main &&
+    css`
+      background-image: linear-gradient(to left, ${black}, #000000);
+      color: ${white};
+      padding: 1rem;
+    `};
+
+  /* Main Body Text - Column */
+  ${props =>
+    props.main_body_text &&
+    css`
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: 3rem;
+        padding: 3rem 0;
+      }
+
+      img {
+        width: 30rem;
+        height: auto;
+        padding-top: 2rem;
+      }
+
+      button {
+        width: 15rem;
+        height: 3rem;
+        margin: 3rem 0;
+        font-size: 2rem;
       }
     `};
 `;
