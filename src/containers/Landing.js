@@ -117,10 +117,6 @@ class Landing extends Component {
                 className="input_search_button"
               />
             </form>
-            <Link to="/search">
-              <h1>Hello</h1>
-            </Link>
-            <Route path="/:id" component={Search} />
           </Col>
           <Row styled_header_main>
             <h1>Hate LFG?</h1>
