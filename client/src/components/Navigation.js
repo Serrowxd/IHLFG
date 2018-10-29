@@ -11,7 +11,7 @@ const Navigation = props => {
       <h1> I Hate LFG </h1>
       <Row nav_items>
         <h2 onClick={props.login}> Log-in </h2>
-        <h2> Sign-up </h2>
+        <h2 onClick={props.signup}> Sign-up </h2>
       </Row>
     </Nav>
   );

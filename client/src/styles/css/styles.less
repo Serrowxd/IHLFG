@@ -14,6 +14,7 @@ span {
 // Colors
 // ***
 
+@black: rgb(47, 47, 47);
 @textblue: rgb(24, 215, 221);
 
 // ***
@@ -56,11 +57,56 @@ span {
   background-color: rgba(47, 47, 47, 0.63);
   transition: 0.25s;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   h1 {
-    font-size: 20rem;
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 1rem;
+  }
+
+  .close_button {
+    float: right;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.5rem;
+    position: absolute;
+    align-self: flex-end;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    background-color: gray;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: @textblue;
+    }
+  }
+
+  form {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    // justify-content: space-around;
+
+    input {
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .submit_button {
+      margin-top: 1rem;
+    }
   }
 }
 

@@ -33,12 +33,56 @@ span {
   background-color: rgba(47, 47, 47, 0.63);
   transition: 0.25s;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .modal_show h1,
 .modal_hide h1 {
-  font-size: 20rem;
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 1rem;
+}
+.modal_show .close_button,
+.modal_hide .close_button {
+  float: right;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.5rem;
+  position: absolute;
+  align-self: flex-end;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  background-color: gray;
+  transition: 0.25s;
+}
+.modal_show .close_button:hover,
+.modal_hide .close_button:hover {
+  background-color: #18d7dd;
+}
+.modal_show form,
+.modal_hide form {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 25%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.modal_show form input,
+.modal_hide form input {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+.modal_show form p,
+.modal_hide form p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.modal_show form .submit_button,
+.modal_hide form .submit_button {
+  margin-top: 1rem;
 }
 .modal_show {
   opacity: 1;

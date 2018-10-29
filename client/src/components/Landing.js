@@ -12,27 +12,56 @@ class Landing extends Component {
   constructor() {
     super();
     this.state = {
-      modal: false,
+      logmodal: false,
+      sigmodal: false,
     };
   }
 
   logModal = () => {
-    let state = this.state.modal;
-    this.setState({ modal: !state });
-    console.log("I'm working!");
+    let state = this.state.logmodal;
+    this.setState({ logmodal: !state });
+  };
+
+  sigModal = () => {
+    let state = this.state.sigmodal;
+    this.setState({ sigmodal: !state });
   };
 
   render() {
     return (
       <Fragment>
-        <Navigation login={this.logModal} />
+        <Navigation login={this.logModal} signup={this.sigModal} />
 
-        <div
-          className={this.state.modal ? 'modal_show' : 'modal_hide'}
-          onClick={this.logModal}
-        >
-          <h1>Henlo (OvO")</h1>
+        {/* Login Modal */}
+        <div className={this.state.logmodal ? 'modal_show' : 'modal_hide'}>
+          <h1>
+            Let's get you logged in <span>(OvO")</span>
+          </h1>
+          <form>
+            <div className="close_button" onClick={this.logModal} />
+            <p>Username</p>
+            <input type="text" placeholder="Username" />
+            <p>Password</p>
+            <input type="password" placeholder="Password" />
+            <input type="submit" value="Login" className="submit_button" />
+          </form>
         </div>
+
+        {/* Signup Modal */}
+        <div className={this.state.sigmodal ? 'modal_show' : 'modal_hide'}>
+          <h1>
+            Let's get you signed up <span>(OvO")</span>
+          </h1>
+          <form>
+            <div className="close_button" onClick={this.sigModal} />
+            <p>Username</p>
+            <input type="text" placeholder="Username" />
+            <p>Password</p>
+            <input type="password" placeholder="Password" />
+            <input type="submit" value="Login" className="submit_button" />
+          </form>
+        </div>
+
         {/* Header */}
         <Row className="main_header" main_header>
           <Col styled_header_main>
