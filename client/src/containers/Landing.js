@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Route, Link } from 'react-router-dom';
 
 // Styles
 import { Col, Row } from '../styles/styles';
 // Imports
-import { Navigation, Footer } from '../reducer';
+import { Navigation, Search } from '../reducer';
+
 // Imgs
 import brainlet from '../assets/brainletultima.png';
 import serrow from '../assets/serrowattak.png';
@@ -14,6 +16,9 @@ class Landing extends Component {
     this.state = {
       logmodal: false,
       sigmodal: false,
+      user: '',
+      pass: '',
+      search: '',
     };
   }
 
@@ -27,7 +32,19 @@ class Landing extends Component {
     this.setState({ sigmodal: !state });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    const { user, pass } = this.state;
+    const { search } = this.state;
+    console.log({ search });
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
+    const { user, pass, search } = this.state;
     return (
       <Fragment>
         <Navigation login={this.logModal} signup={this.sigModal} />
@@ -37,12 +54,22 @@ class Landing extends Component {
           <h1>
             Let's get you logged in <span>(OvO")</span>
           </h1>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="close_button" onClick={this.logModal} />
             <p>Username</p>
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              placeholder="Username"
+              defaultValue={user}
+              onChange={this.handleChange}
+            />
             <p>Password</p>
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              defaultValue={pass}
+              onChange={this.handleChange}
+            />
             <input type="submit" value="Login" className="submit_button" />
           </form>
         </div>
@@ -52,13 +79,23 @@ class Landing extends Component {
           <h1>
             Let's get you signed up <span>(OvO")</span>
           </h1>
-          <form>
+          <form onChange={this.handleSubmit}>
             <div className="close_button" onClick={this.sigModal} />
             <p>Username</p>
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              placeholder="Username"
+              defaultValue={user}
+              onChange={this.handleChange}
+            />
             <p>Password</p>
-            <input type="password" placeholder="Password" />
-            <input type="submit" value="Login" className="submit_button" />
+            <input
+              type="password"
+              placeholder="Password"
+              defaultValue={pass}
+              onChange={this.handleChange}
+            />
+            <input type="submit" value="Sign Up" className="submit_button" />
           </form>
         </div>
 
@@ -66,11 +103,13 @@ class Landing extends Component {
         <Row className="main_header" main_header>
           <Col styled_header_main>
             <h1> Player Search </h1>
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <input
                 type="text"
                 placeholder="Username#1234"
                 className="input_search_header"
+                defaultValue={search}
+                onChange={this.handleChange}
               />
               <input
                 type="submit"
@@ -78,6 +117,10 @@ class Landing extends Component {
                 className="input_search_button"
               />
             </form>
+            <Link to="/search">
+              <h1>Hello</h1>
+            </Link>
+            <Route path="/:id" component={Search} />
           </Col>
           <Row styled_header_main>
             <h1>Hate LFG?</h1>
@@ -118,12 +161,10 @@ class Landing extends Component {
             <Col main_body_text>
               <h1>The LFG YOU want,</h1>
               <h1>Without all the hassle.</h1>
-              <button>Sign Up</button>
+              <button onClick={this.sigModal}>Sign Up</button>
             </Col>
           </Row>
         </Col>
-
-        <Footer />
       </Fragment>
     );
   }

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+
+// Imports
+import { Search, Landing, Footer } from './reducer';
 
 // Styles
 import { GlobalContainer } from './styles/styles';
-// Imports
-import { Landing } from './reducer';
 
 class App extends Component {
   render() {
     return (
       <GlobalContainer>
-        <Landing />
+        {/* Routes */}
+        <Route exact path="/" component={Landing} />
+        {/* <Route path="/search" component={Search} /> */}
+
+        <Footer />
       </GlobalContainer>
     );
   }
