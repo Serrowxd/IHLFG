@@ -7,7 +7,7 @@ import { Col, Row } from '../styles/styles';
 import { Navigation, Search } from '../reducer';
 
 // Imgs
-import brainlet from '../assets/brainletultima.png';
+import serrowpng from '../assets/SERROWpng.png';
 import serrow from '../assets/serrowattak.png';
 
 class Landing extends Component {
@@ -134,8 +134,8 @@ class Landing extends Component {
             </Col>
             <Col main_body_text>
               <img
-                src={brainlet}
-                className="brainlet_img_main"
+                src={serrowpng}
+                className="brainlet_img_main serrow_fix"
                 alt="LFG Player"
               />
               <h1>

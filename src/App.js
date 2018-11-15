@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 // Imports
-import { Search, Landing, Footer } from './reducer';
+import { SearchResult, Landing, Footer } from './reducer';
 
 // Styles
 import { GlobalContainer } from './styles/styles';
@@ -13,6 +13,7 @@ class App extends Component {
       <GlobalContainer>
         {/* Routes */}
         <Route exact path="/" component={Landing} />
+        <Route path="/search" component={SearchResult} />
         {/* <Route path="/search" component={Search} /> */}
 
         <Footer />

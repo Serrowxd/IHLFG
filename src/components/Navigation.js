@@ -5,8 +5,12 @@ const Navigation = props => {
   return (
     <Nav>
       <Row nav_items>
-        <h2> Home </h2>
-        <h2> Patreon </h2>
+        <a href="/">
+          <h2> Home </h2>
+        </a>
+        <a href="/search">
+          <h2> Patreon </h2>
+        </a>
       </Row>
       <h1> I Hate LFG </h1>
       <Row nav_items>

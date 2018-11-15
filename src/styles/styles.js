@@ -6,11 +6,12 @@ import styled, { css } from 'styled-components';
 
 const colors = {
   black: '#2f2f2f',
+  blacker: '#232323',
   white: '#ffffff',
   textblue: '#18d7dd',
 };
 
-const { black, white, textblue } = colors;
+const { black, blacker, white, textblue } = colors;
 
 // ***
 // Global
@@ -20,7 +21,9 @@ export const GlobalContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1920px;
-  min-height: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+  /* This sets the page to actually be 100% height??? */
 `;
 
 export const Row = styled.div`
@@ -154,6 +157,15 @@ export const Col = styled.div`
         margin-top: 0.5rem;
       }
     `};
+
+  ${props =>
+    props.search_result &&
+    css`
+      justify-content: space-around;
+      background-color: ${blacker};
+      color: ${white};
+      padding: 3rem;
+    `}
 `;
 
 // ***

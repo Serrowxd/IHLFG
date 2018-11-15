@@ -2,7 +2,8 @@
 // Containers
 // ***
 import Landing from './containers/Landing';
-import Search from './containers/Search';
+// import Search from './containers/Search';
+import SearchResult from './containers/SearchResult';
 
 // ***
 // Components
@@ -16,7 +17,7 @@ import Footer from './components/Footer';
 export {
   // Containers
   Landing,
-  Search,
+  SearchResult,
   // Components
   Navigation,
   Footer,
