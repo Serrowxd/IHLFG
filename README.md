@@ -10,7 +10,6 @@ Cuts down on load times & gives a local resource to pull from.
 
 # To-Do
 
-<<<<<<< HEAD
 - Set-up Firebase
 - Attach real-time
 - Create NodeJS back-end to pull from API to Database
@@ -32,8 +31,3 @@ Cuts down on load times & gives a local resource to pull from.
 - Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified)
   - Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be unable to comment/vote.
 - Move Navigation & Modals to Global Scope
-=======
-- Reactivity
-- Search Page & 404 (can be same container, different component rendered)
-- User Account Pages (User & Logged-in Owner of Profile)
->>>>>>> f451211a276729de2cb28b1426d3aaf11fedc7cf
