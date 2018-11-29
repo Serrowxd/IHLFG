@@ -71,6 +71,41 @@ export const Row = styled.div`
     css`
       justify-content: space-around;
     `};
+
+  /* Search Results Header */
+  ${props =>
+    props.search_result_head &&
+    css`
+      justify-content: center;
+      padding-bottom: 3rem;
+    `}
+
+  ${props =>
+    props.search_result &&
+    css`
+      justify-content: space-around;
+      font-size: 1.2rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+
+      background: ${black};
+      padding: 1rem;
+      margin: 1rem;
+
+      &:hover {
+        background: ${blacker};
+        cursor: pointer;
+      }
+      transition: 0.25s;
+      /* Animations */
+
+      h1,
+      p {
+        width: 10rem;
+      }
+      /* this prevents long names from breaking the list. */
+    `}
 `;
 
 export const Col = styled.div`
@@ -158,13 +193,15 @@ export const Col = styled.div`
       }
     `};
 
+  /* Search Results */
   ${props =>
     props.search_result &&
     css`
-      justify-content: space-around;
       background-color: ${blacker};
       color: ${white};
       padding: 3rem;
+      height: 75vh;
+      /* Manual height setting */
     `}
 `;
 
