@@ -26,9 +26,17 @@ export const GlobalContainer = styled.div`
   /* This sets the page to actually be 100% height??? */
 `;
 
+// ***
+// Row
+// ***
+
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: ${props => props.justify};
+  width: ${props => props.width};
+  height: ${props => props.height};
+  align-items: ${props => props.align};
 
   /* Navigation Items */
   ${props =>
@@ -106,11 +114,33 @@ export const Row = styled.div`
       }
       /* this prevents long names from breaking the list. */
     `}
+
+  ${props =>
+    props.user_row &&
+    css`
+      justify-content: space-around;
+      padding: 3rem;
+      height: 75vh;
+      color: ${white};
+      background-color: ${blacker};
+      background-image: url(https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    `}
 `;
+
+// ***
+// Column
+// ***
 
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: ${props => props.justify};
+  width: ${props => props.width};
+  height: ${props => props.height};
+  align-items: ${props => props.align};
 
   /* Main Header Text Left - Column */
   ${props =>
@@ -202,6 +232,39 @@ export const Col = styled.div`
       padding: 3rem;
       height: 75vh;
       /* Manual height setting */
+    `}
+
+  ${props =>
+    props.user_information &&
+    css`
+      width: 20%;
+      align-items: center;
+      justify-content: center;
+
+      h1,
+      h2,
+      h3 {
+        padding-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    `}
+
+  ${props =>
+    props.user_info_display &&
+    css`
+      justify-content: space-around;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      h3 {
+        font-size: 2rem;
+      }
     `}
 `;
 

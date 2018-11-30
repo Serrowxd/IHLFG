@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 // Imports
-import { SearchResult, Landing, Footer } from './reducer';
+import { SearchResult, Landing, Footer, UserDisplay } from './reducer';
 
 // Styles
 import { GlobalContainer } from './styles/styles';
@@ -14,6 +14,7 @@ class App extends Component {
         {/* Routes */}
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={SearchResult} />
+        <Route path="/users/serrow" component={UserDisplay} />
         {/* <Route path="/search" component={Search} /> */}
 
         <Footer />

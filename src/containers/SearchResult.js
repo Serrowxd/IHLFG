@@ -15,17 +15,20 @@ const SearchResult = props => {
             Search Results - <span> Current Rating </span>
           </h1>
         </Row>
+
         {/* These rows will be generated via a map */}
-        <Row search_result>
-          {/* This information will be passed as props, temporary holder */}
-          <p>[icon]</p>
-          <p>[image]</p>
-          <h1>Serrow</h1>
-          <p>Mal'Ganis</p>
-          <p>Druid</p>
-          <p>2100 [star rating]</p>
-          <p>></p>
-        </Row>
+        <a href="/users/serrow">
+          <Row search_result>
+            {/* This information will be passed as props, temporary holder */}
+            <p>[icon]</p>
+            <p>[image]</p>
+            <h1>Serrow</h1>
+            <p>Mal'Ganis</p>
+            <p>Druid</p>
+            <p>2100 [star rating]</p>
+            <p>></p>
+          </Row>
+        </a>
         <Row search_result>
           {/* This information will be passed as props, temporary holder */}
           <p>[icon]</p>

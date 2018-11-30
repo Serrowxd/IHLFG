@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Route, Link } from 'react-router-dom';
 
 // Styles
 import { Col, Row } from '../styles/styles';
@@ -34,7 +34,7 @@ class Landing extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { user, pass } = this.state;
+    // const { user, pass } = this.state;
     const { search } = this.state;
     console.log({ search });
   };
