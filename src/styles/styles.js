@@ -123,7 +123,7 @@ export const Row = styled.div`
       height: 75vh;
       color: ${white};
       background-color: ${blacker};
-      background-image: url(https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg);
+      background-image: url(${props => props.image});
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;

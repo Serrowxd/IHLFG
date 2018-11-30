@@ -11,7 +11,7 @@ const UserDisplay = props => {
       <Navigation />
       <Row
         user_row
-        image="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg"
+        image="https://render-us.worldofwarcraft.com/character/emerald-dream/230/163666150-main.jpg"
       >
         <Col user_information>
           <h1>Serrow</h1>

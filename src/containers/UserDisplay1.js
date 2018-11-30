@@ -9,13 +9,10 @@ const UserDisplay = props => {
   return (
     <Fragment>
       <Navigation />
-      <Row
-        user_row
-        image="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg"
-      >
+      <Row user_row img={props.image}>
         <Col user_information>
-          <h1>Serrow</h1>
-          <h2>Mal'Ganis</h2>
+          <h1>{props.name}</h1>
+          <h2>{props.realm}</h2>
           <p>[Star Rating]</p>
         </Col>
         <Col user_information user_info_display>
@@ -26,17 +23,17 @@ const UserDisplay = props => {
           </Row>
           <Col align="center" justify="space-around" height="15rem">
             <h3>
-              2's: <span>2100</span>
+              2's: <span>{props.rating2s}</span>
             </h3>
             <h3>
-              3's: <span>1900</span>
+              3's: <span>{props.rating3s}</span>
             </h3>
             <h3>
               RBG's: <span>Haha yeah..</span>
             </h3>
           </Col>
           <Row>
-            <h3> Games Played: 300 </h3>
+            <h3> Games Played: {props.games} </h3>
           </Row>
         </Col>
       </Row>
@@ -45,3 +42,5 @@ const UserDisplay = props => {
 };
 
 export default UserDisplay;
+
+// This will be used when props are being passed down.

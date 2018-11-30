@@ -14,10 +14,16 @@ const Navigation = props => {
       </Row>
       <h1> I Hate LFG </h1>
       <Row nav_items>
-        {/* <h2 onClick={props.login}> Log-in </h2>
-        <h2 onClick={props.signup}> Sign-up </h2> */}
+        {/* User is not loggged-in ~ display */}
+        {/* <h2 onClick={props.login}> Log-in </h2> */}
+        {/* <h2 onClick={props.signup}> Sign-up </h2> */}
+
+        {/* User is logged-in ~ display */}
         <a href="/account/serrow">
           <h2>Profile</h2>
+        </a>
+        <a href="/account/serrow">
+          <h2>Logout</h2>
         </a>
       </Row>
     </Nav>

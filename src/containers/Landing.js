@@ -43,6 +43,11 @@ class Landing extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  searchref = () => {
+    window.location = '/search';
+  };
+  // Temporary href function to link to the search bar.
+
   render() {
     const { user, pass, search } = this.state;
     return (
@@ -115,6 +120,7 @@ class Landing extends Component {
                 type="submit"
                 value="Search"
                 className="input_search_button"
+                onClick={this.searchref}
               />
             </form>
           </Col>
