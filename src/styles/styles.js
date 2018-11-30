@@ -234,6 +234,7 @@ export const Col = styled.div`
       /* Manual height setting */
     `}
 
+  /* User Information */
   ${props =>
     props.user_information &&
     css`
@@ -256,6 +257,7 @@ export const Col = styled.div`
       }
     `}
 
+  /* User Info Display */
   ${props =>
     props.user_info_display &&
     css`
@@ -264,6 +266,35 @@ export const Col = styled.div`
 
       h3 {
         font-size: 2rem;
+      }
+    `}
+
+  /* Account Container */
+  ${props =>
+    props.account_container &&
+    css`
+      height: 75vh;
+      padding: 3rem;
+      background-color: ${blacker};
+    `}
+
+  /* Account Container Left */
+
+  ${props =>
+    props.acc_cont_left &&
+    css`
+      color: ${white};
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      p {
+        padding: 1rem;
       }
     `}
 `;
