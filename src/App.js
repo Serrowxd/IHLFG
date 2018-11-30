@@ -14,6 +14,7 @@ class App extends Component {
         {/* Routes */}
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={SearchResult} />
+        {/* This route should be dynamic based on users/:id */}
         <Route path="/users/serrow" component={UserDisplay} />
         {/* <Route path="/search" component={Search} /> */}
 
