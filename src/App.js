@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 // Data
 import { users } from './data/users';
@@ -21,20 +21,57 @@ class App extends Component {
     super(props);
     this.state = {
       userdata: users,
+      search: '',
     };
   }
+
+  handleSubmit = searchValue => {
+    // const { user, pass } = this.state;
+    this.setState({ search: searchValue });
+    // console.log(this.state.search);
+    console.log(searchValue);
+    // console.log(e.target);
+  };
+
   render() {
+    const { search } = this.state;
     return (
       <GlobalContainer>
-        {/* Routes */}
-        <Route exact path="/" component={Landing} />
-        <Route path="/search" component={SearchResult} />
-        {/* This route should be dynamic based on users/:id */}
-        <Route path="/users/autoimonk" component={Auto} />
-        <Route path="/users/serrow" component={UserDisplay} />
-        {/* Accounts are dynamic like users */}
-        <Route path="/account/serrow" component={AccountDisplay} />
-        {/* <Route path="/search" component={Search} /> */}
+        {/* <Landing
+          handleSubmit={search => {
+            this.handleSubmit(search);
+          }}
+        /> */}
+        <Switch>
+          {/* Routes */}
+          <Route
+            exact
+            path="/"
+            component={() => {
+              return (
+                <Landing
+                  handleSubmit={search => {
+                    this.handleSubmit(search);
+                  }}
+                />
+              );
+            }}
+          />
+
+          <Route
+            path="/search"
+            render={routeProps => (
+              <SearchResult {...routeProps} searchInfo={search} />
+            )}
+          />
+
+          {/* This route should be dynamic based on users/:id */}
+          <Route path="/users/autoimonk" component={Auto} />
+          <Route path="/users/serrow" component={UserDisplay} />
+          {/* Accounts are dynamic like users */}
+          <Route path="/account/serrow" component={AccountDisplay} />
+          {/* <Route path="/search" component={Search} /> */}
+        </Switch>
       </GlobalContainer>
     );
   }

@@ -11,14 +11,15 @@ import serrowpng from '../assets/SERROWpng.png';
 import serrow from '../assets/serrowattak.png';
 
 class Landing extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       logmodal: false,
       sigmodal: false,
       user: '',
       pass: '',
       search: '',
+      result: [],
     };
   }
 
@@ -36,19 +37,20 @@ class Landing extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // const { user, pass } = this.state;
-    const { search } = this.state;
-    console.log({ search });
+    // const { user, pass } = this.state;=
+    this.props.handleSubmit(this.state.search);
   };
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ search: e.target.value });
     console.log({ [e.target.name]: e.target.value });
   };
 
   // Temporary href function to link to the search bar.
   searchref = () => {
-    window.location = '/search';
+    setTimeout(function() {
+      window.location = '/search';
+    }, 1500);
   };
 
   render() {
@@ -119,12 +121,19 @@ class Landing extends Component {
                 defaultValue={search}
                 onChange={this.handleChange}
               />
-              <input
+              {/* <input
                 type="submit"
-                value="Search"
+                value="search"
                 className="input_search_button"
                 // onClick={this.searchref}
-              />
+              /> */}
+              <button
+                type="submit"
+                value="search"
+                className="input_search_button"
+              >
+                Submit
+              </button>
             </form>
           </Col>
           <Row styled_header_main>

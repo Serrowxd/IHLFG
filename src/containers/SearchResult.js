@@ -6,6 +6,7 @@ import { Col, Row } from '../styles/styles';
 import { Navigation, FooterS } from '../reducer';
 
 const SearchResult = props => {
+  console.log(props.searchInfo);
   return (
     <Fragment>
       <Navigation />
@@ -32,6 +33,7 @@ const SearchResult = props => {
             <p>Monk</p>
             <p>2600 [star rating]</p>
             <p>></p>
+            <p>{props.searchInfo}</p>
           </Row>
         </a>
 
