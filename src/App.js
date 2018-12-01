@@ -42,8 +42,9 @@ class App extends Component {
             this.handleSubmit(search);
           }}
         /> */}
+
+        {/* Routes */}
         <Switch>
-          {/* Routes */}
           <Route
             exact
             path="/"
@@ -68,9 +69,9 @@ class App extends Component {
           {/* This route should be dynamic based on users/:id */}
           <Route path="/users/autoimonk" component={Auto} />
           <Route path="/users/serrow" component={UserDisplay} />
+
           {/* Accounts are dynamic like users */}
           <Route path="/account/serrow" component={AccountDisplay} />
-          {/* <Route path="/search" component={Search} /> */}
         </Switch>
       </GlobalContainer>
     );

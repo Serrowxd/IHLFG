@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-// import { BrowserRouter as Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Link } from 'react-router-dom';
 
 // Styles
 import { Col, Row } from '../styles/styles';
@@ -37,13 +37,11 @@ class Landing extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // const { user, pass } = this.state;=
     this.props.handleSubmit(this.state.search);
   };
 
   handleChange = e => {
     this.setState({ search: e.target.value });
-    console.log({ [e.target.name]: e.target.value });
   };
 
   // Temporary href function to link to the search bar.
@@ -113,6 +111,8 @@ class Landing extends Component {
         <Row className="main_header" main_header>
           <Col styled_header_main>
             <h1> Player Search </h1>
+
+            {/* Search Form */}
             <form onSubmit={this.handleSubmit}>
               <input
                 type="text"
@@ -131,6 +131,7 @@ class Landing extends Component {
                 type="submit"
                 value="search"
                 className="input_search_button"
+                // onClick={this.searchref}
               >
                 Submit
               </button>
