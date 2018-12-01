@@ -43,6 +43,7 @@ class Landing extends Component {
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+    console.log({ [e.target.name]: e.target.value });
   };
 
   // Temporary href function to link to the search bar.
@@ -122,7 +123,7 @@ class Landing extends Component {
                 type="submit"
                 value="Search"
                 className="input_search_button"
-                onClick={this.searchref}
+                // onClick={this.searchref}
               />
             </form>
           </Col>
