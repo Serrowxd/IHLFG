@@ -11,7 +11,7 @@ Cuts down on load times & gives a local resource to pull from.
 - Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified)
   - Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be
 
-<!--  -->
+Search Bars are UGGGGGGHHHHHHH -- Make this work >:C
 
 # To-Do
 

@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 // Styles
 import { Col, Row } from '../styles/styles';
 // Imports
-import { Navigation, Search } from '../reducer';
+import { Navigation, Footer } from '../reducer';
 
 // Imgs
 import serrowpng from '../assets/SERROWpng.png';
@@ -22,11 +22,13 @@ class Landing extends Component {
     };
   }
 
+  // Log-in Modal
   logModal = () => {
     let state = this.state.logmodal;
     this.setState({ logmodal: !state });
   };
 
+  // Sign-up Modal
   sigModal = () => {
     let state = this.state.sigmodal;
     this.setState({ sigmodal: !state });
@@ -43,10 +45,10 @@ class Landing extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  // Temporary href function to link to the search bar.
   searchref = () => {
     window.location = '/search';
   };
-  // Temporary href function to link to the search bar.
 
   render() {
     const { user, pass, search } = this.state;
@@ -167,6 +169,8 @@ class Landing extends Component {
             </Col>
           </Row>
         </Col>
+
+        <Footer />
       </Fragment>
     );
   }

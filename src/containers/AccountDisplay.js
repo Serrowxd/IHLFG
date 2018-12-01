@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { Navigation } from '../reducer';
+import { Navigation, FooterS } from '../reducer';
 import { Col } from '../styles/styles';
 
 const AccountDisplay = props => {
@@ -14,9 +14,9 @@ const AccountDisplay = props => {
             src="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-avatar.jpg"
             alt="serrow"
           />
-          <p>[New Image Button]</p>
         </Col>
       </Col>
+      <FooterS />
     </Fragment>
   );
 };

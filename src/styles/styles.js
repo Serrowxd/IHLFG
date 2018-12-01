@@ -9,9 +9,10 @@ const colors = {
   blacker: '#232323',
   white: '#ffffff',
   textblue: '#18d7dd',
+  gray: '#424242',
 };
 
-const { black, blacker, white, textblue } = colors;
+const { black, blacker, white, textblue, gray } = colors;
 
 // ***
 // Global
@@ -37,6 +38,9 @@ export const Row = styled.div`
   width: ${props => props.width};
   height: ${props => props.height};
   align-items: ${props => props.align};
+
+  /* Remove this later */
+  color: ${props => props.color};
 
   /* Navigation Items */
   ${props =>
@@ -96,13 +100,14 @@ export const Row = styled.div`
       position: relative;
       overflow: hidden;
       text-align: center;
+      align-items: center;
 
       background: ${black};
       padding: 1rem;
       margin: 1rem;
 
       &:hover {
-        background: ${blacker};
+        background: ${gray};
         cursor: pointer;
       }
       transition: 0.25s;
@@ -113,6 +118,11 @@ export const Row = styled.div`
         width: 10rem;
       }
       /* this prevents long names from breaking the list. */
+
+      img {
+        width: auto;
+        height: 4rem;
+      }
     `}
 
   ${props =>
@@ -120,7 +130,8 @@ export const Row = styled.div`
     css`
       justify-content: space-around;
       padding: 3rem;
-      height: 75vh;
+      /* 80vh with FooterS, 75vh with Footer */
+      height: 80vh;
       color: ${white};
       background-color: ${blacker};
       background-image: url(${props => props.image});
@@ -230,7 +241,8 @@ export const Col = styled.div`
       background-color: ${blacker};
       color: ${white};
       padding: 3rem;
-      height: 75vh;
+      height: 80vh;
+
       /* Manual height setting */
     `}
 
@@ -273,7 +285,7 @@ export const Col = styled.div`
   ${props =>
     props.account_container &&
     css`
-      height: 75vh;
+      height: 80vh;
       padding: 3rem;
       background-color: ${blacker};
     `}
@@ -291,10 +303,17 @@ export const Col = styled.div`
 
       h1 {
         font-size: 5rem;
+        padding-bottom: 2rem;
       }
 
       p {
         padding: 1rem;
+      }
+
+      img {
+        width: auto;
+        height: 15rem;
+        border-radius: 3rem;
       }
     `}
 `;
@@ -337,4 +356,10 @@ export const Foot = styled.div`
   height: 10vh;
   background-color: ${black};
   justify-content: space-around;
+
+  ${props =>
+    props.foots &&
+    css`
+      height: 3rem;
+    `}
 `;

@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 // Styles
 import { Col, Row } from '../styles/styles';
 // Imports
-import { Navigation } from '../reducer';
+import { Navigation, FooterS } from '../reducer';
 
 const SearchResult = props => {
   return (
@@ -17,11 +17,32 @@ const SearchResult = props => {
         </Row>
 
         {/* These rows will be generated via a map */}
+        {/* Current Highest Rating will determine height on the list */}
+
+        <a href="/users/autoimonk">
+          <Row search_result>
+            {/* This information will be passed as props, temporary holder */}
+            <p>[icon]</p>
+            <img
+              src="https://render-us.worldofwarcraft.com/character/emerald-dream/230/163666150-avatar.jpg"
+              alt="smolicon"
+            />
+            <h1>Autoimonk</h1>
+            <p>Emerald Dream</p>
+            <p>Monk</p>
+            <p>2600 [star rating]</p>
+            <p>></p>
+          </Row>
+        </a>
+
         <a href="/users/serrow">
           <Row search_result>
             {/* This information will be passed as props, temporary holder */}
             <p>[icon]</p>
-            <p>[image]</p>
+            <img
+              src="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-avatar.jpg"
+              alt="smolicon"
+            />
             <h1>Serrow</h1>
             <p>Mal'Ganis</p>
             <p>Druid</p>
@@ -29,27 +50,8 @@ const SearchResult = props => {
             <p>></p>
           </Row>
         </a>
-        <Row search_result>
-          {/* This information will be passed as props, temporary holder */}
-          <p>[icon]</p>
-          <p>[image]</p>
-          <h1>Autoimonk</h1>
-          <p>Emerald Dream</p>
-          <p>Monk</p>
-          <p>2700 [star rating]</p>
-          <p>></p>
-        </Row>
-        <Row search_result>
-          {/* This information will be passed as props, temporary holder */}
-          <p>[icon]</p>
-          <p>[image]</p>
-          <h1>Hero</h1>
-          <p>Emerald Dream</p>
-          <p>Rogue</p>
-          <p>1500 [star rating]</p>
-          <p>></p>
-        </Row>
       </Col>
+      <FooterS />
     </Fragment>
   );
 };

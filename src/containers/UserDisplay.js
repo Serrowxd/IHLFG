@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 // Styles
 import { Col, Row } from '../styles/styles';
 // Imports
-import { Navigation } from '../reducer';
+import { Navigation, FooterS } from '../reducer';
 
 const UserDisplay = props => {
   return (
@@ -40,6 +40,7 @@ const UserDisplay = props => {
           </Row>
         </Col>
       </Row>
+      <FooterS />
     </Fragment>
   );
 };
