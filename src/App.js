@@ -33,8 +33,11 @@ class App extends Component {
     // console.log(e.target);
   };
 
+  // fetchApi = (component, url) => {
+  //   axios.get();
+  // };
+
   render() {
-    const { search } = this.state;
     return (
       <GlobalContainer>
         {/* <Landing
@@ -61,8 +64,8 @@ class App extends Component {
 
           <Route
             path="/search"
-            render={routeProps => (
-              <SearchResult {...routeProps} searchInfo={search} />
+            render={props => (
+              <SearchResult {...props} searchInfo={this.state.search} />
             )}
           />
 

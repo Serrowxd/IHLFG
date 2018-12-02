@@ -92,6 +92,7 @@ export const Row = styled.div`
       padding-bottom: 3rem;
     `}
 
+    /* Search Results */
   ${props =>
     props.search_result &&
     css`
@@ -125,6 +126,7 @@ export const Row = styled.div`
       }
     `}
 
+    /* User Row */
   ${props =>
     props.user_row &&
     css`
@@ -139,6 +141,45 @@ export const Row = styled.div`
       background-position: center;
       background-size: 100%;
     `}
+
+    ${props =>
+      props.user_tabs &&
+      css`
+        justify-content: space-around;
+        width: 100%;
+        height: 2rem;
+        align-items: center;
+
+        p {
+          transition: 0.25s;
+          padding: 1rem;
+          font-size: 1.5rem;
+
+          &:hover {
+            background-color: ${blacker};
+            color: ${textblue};
+            cursor: pointer;
+          }
+        }
+      `}
+
+    ${props =>
+      props.update_button &&
+      css`
+        h4 {
+          font-size: 1.3rem;
+          padding: 1rem;
+          transition: 0.25s;
+
+          &:hover {
+            background-color: ${blacker};
+            color: ${textblue};
+            cursor: pointer;
+          }
+        }
+      `}
+
+
 `;
 
 // ***

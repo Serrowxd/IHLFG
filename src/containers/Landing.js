@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-// import { BrowserRouter as Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 // Styles
 import { Col, Row } from '../styles/styles';
@@ -38,6 +38,7 @@ class Landing extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.handleSubmit(this.state.search);
+    this.props.history.push('/search');
   };
 
   handleChange = e => {
@@ -121,17 +122,11 @@ class Landing extends Component {
                 defaultValue={search}
                 onChange={this.handleChange}
               />
-              {/* <input
-                type="submit"
-                value="search"
-                className="input_search_button"
-                // onClick={this.searchref}
-              /> */}
+
               <button
                 type="submit"
                 value="search"
                 className="input_search_button"
-                // onClick={this.searchref}
               >
                 Submit
               </button>
@@ -187,4 +182,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default withRouter(Landing);

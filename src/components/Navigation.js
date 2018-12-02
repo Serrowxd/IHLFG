@@ -1,16 +1,17 @@
 import React from 'react';
 import { Nav, Row } from '../styles/styles';
+import { Link } from 'react-router-dom';
 
 const Navigation = props => {
   return (
     <Nav>
       <Row nav_items>
-        <a href="/">
+        <Link to="/">
           <h2> Home </h2>
-        </a>
-        <a href="/search">
+        </Link>
+        <Link to="/search">
           <h2> Patreon </h2>
-        </a>
+        </Link>
       </Row>
       <h1> I Hate LFG </h1>
       <Row nav_items>
