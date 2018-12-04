@@ -6,7 +6,6 @@ export const users = [
     twos: '2500',
     threes: '2600',
     rbgs: 'null',
-    games: 'LOTS',
     imgB:
       'https://render-us.worldofwarcraft.com/character/emerald-dream/230/163666150-main.jpg',
     imgS:
@@ -19,7 +18,6 @@ export const users = [
     twos: '2100',
     threes: '1900',
     rbgs: 'null',
-    games: 'LOTS',
     imgB:
       'https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg',
     imgS:

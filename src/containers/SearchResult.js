@@ -23,7 +23,7 @@ class SearchResult extends Component {
         <Col search_result>
           <Row search_result_head>
             <h1>
-              Search Results - <span> Current Rating </span>
+              Search Results - <span>{this.props.searchInfo}</span>
             </h1>
           </Row>
 
@@ -43,7 +43,6 @@ class SearchResult extends Component {
               <p>Monk</p>
               <p>2600 [star rating]</p>
               <p>></p>
-              <p>{this.props.searchInfo}</p>
             </Row>
           </a>
 
