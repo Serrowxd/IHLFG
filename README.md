@@ -8,14 +8,15 @@ Rather than pulling directly from the API when searching for the player informat
 
 Cuts down on load times & gives a local resource to pull from.
 
-- Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified)
-  - Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be
-
-Search Bars are UGGGGGGHHHHHHH -- Make this work >:C
+Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified). Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be blocked from rating the player.
 
 # To-Do
 
 [Trello](https://trello.com/b/qTFZ9bVa/ihlfg)
+
+[Front-End Repo](https://github.com/Serrowxd/IHLFG)
+
+[Back-End Repo](https://github.com/JaredRCooper/IHateLfgBackend)
 
 # Documentation
 
