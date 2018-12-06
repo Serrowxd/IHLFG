@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-// Data
-import { users } from './data/users';
+import axios from 'axios';
 
 // Imports
 import {
@@ -20,7 +18,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userdata: users,
+      userdata: [],
       search: '',
     };
   }
@@ -34,8 +32,13 @@ class App extends Component {
   };
 
   // fetchApi = (component, url) => {
-  //   axios.get();
-  // };
+  fetchApi = () => {
+    axios.get('http://localhost:5500/get').then(res => {
+      const user = res.data;
+      this.setState({ userdata: user });
+      console.log(this.state.userdata);
+    });
+  };
 
   render() {
     return (
@@ -57,6 +60,7 @@ class App extends Component {
                   handleSubmit={search => {
                     this.handleSubmit(search);
                   }}
+                  fetch={this.fetchApi}
                 />
               );
             }}
@@ -65,7 +69,11 @@ class App extends Component {
           <Route
             path="/search"
             render={props => (
-              <SearchResult {...props} searchInfo={this.state.search} />
+              <SearchResult
+                {...props}
+                searchInfo={this.state.search}
+                mainInfo={this.state.userdata}
+              />
             )}
           />
 

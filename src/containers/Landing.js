@@ -20,6 +20,7 @@ class Landing extends Component {
       pass: '',
       search: '',
       result: [],
+      api: '',
     };
   }
 
@@ -57,6 +58,8 @@ class Landing extends Component {
     return (
       <Fragment>
         <Navigation login={this.logModal} signup={this.sigModal} />
+
+        <h1 onClick={this.props.fetch}> Henlo (OvO")</h1>
 
         {/* Login Modal */}
         <div className={this.state.logmodal ? 'modal_show' : 'modal_hide'}>

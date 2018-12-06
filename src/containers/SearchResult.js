@@ -10,12 +10,14 @@ class SearchResult extends Component {
     super(props);
     this.state = {
       state: null,
+      userData: [],
     };
   }
 
-  componentDidMount() {
+  componentDidMount(props) {
     console.log(this.props);
   }
+
   render() {
     return (
       <Fragment>
