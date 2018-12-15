@@ -10,6 +10,14 @@ Cuts down on load times & gives a local resource to pull from.
 
 Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified). Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be blocked from rating the player.
 
+# Small Notes
+
+https://www.npmjs.com/package/query-string
+
+https://tylermcginnis.com/react-router-query-strings/
+
+https://www.howtographql.com/
+
 # To-Do
 
 [Trello](https://trello.com/b/qTFZ9bVa/ihlfg)
