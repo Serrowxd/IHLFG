@@ -9,10 +9,7 @@ const Auto = props => {
   return (
     <Fragment>
       <Navigation />
-      <Row
-        user_row
-        image="https://render-us.worldofwarcraft.com/character/emerald-dream/230/163666150-main.jpg"
-      >
+      <Row user_row image="https://render-us.worldofwarcraft.com/character/emerald-dream/230/163666150-main.jpg">
         <Col user_information>
           <h1>Autoimonk</h1>
           <h2>Emerald Dream</h2>

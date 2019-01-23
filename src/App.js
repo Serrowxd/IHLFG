@@ -3,13 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
 // Imports
-import {
-  SearchResult,
-  Landing,
-  UserDisplay,
-  AccountDisplay,
-  Auto,
-} from './reducer';
+import { SearchResult, Landing, UserDisplay, AccountDisplay, Auto } from './reducer';
 
 // Styles
 import { GlobalContainer } from './styles/styles';
@@ -68,13 +62,7 @@ class App extends Component {
 
           <Route
             path="/search"
-            render={props => (
-              <SearchResult
-                {...props}
-                searchInfo={this.state.search}
-                mainInfo={this.state.userdata}
-              />
-            )}
+            render={props => <SearchResult {...props} searchInfo={this.state.search} mainInfo={this.state.userdata} />}
           />
 
           {/* This route should be dynamic based on users/:id */}

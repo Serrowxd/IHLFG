@@ -69,19 +69,9 @@ class Landing extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="close_button" onClick={this.logModal} />
             <p>Username</p>
-            <input
-              type="text"
-              placeholder="Username"
-              defaultValue={user}
-              onChange={this.handleChange}
-            />
+            <input type="text" placeholder="Username" defaultValue={user} onChange={this.handleChange} />
             <p>Password</p>
-            <input
-              type="password"
-              placeholder="Password"
-              defaultValue={pass}
-              onChange={this.handleChange}
-            />
+            <input type="password" placeholder="Password" defaultValue={pass} onChange={this.handleChange} />
             <input type="submit" value="Login" className="submit_button" />
           </form>
         </div>
@@ -94,19 +84,9 @@ class Landing extends Component {
           <form onChange={this.handleSubmit}>
             <div className="close_button" onClick={this.sigModal} />
             <p>Username</p>
-            <input
-              type="text"
-              placeholder="Username"
-              defaultValue={user}
-              onChange={this.handleChange}
-            />
+            <input type="text" placeholder="Username" defaultValue={user} onChange={this.handleChange} />
             <p>Password</p>
-            <input
-              type="password"
-              placeholder="Password"
-              defaultValue={pass}
-              onChange={this.handleChange}
-            />
+            <input type="password" placeholder="Password" defaultValue={pass} onChange={this.handleChange} />
             <input type="submit" value="Sign Up" className="submit_button" />
           </form>
         </div>
@@ -126,11 +106,7 @@ class Landing extends Component {
                 onChange={this.handleChange}
               />
 
-              <button
-                type="submit"
-                value="search"
-                className="input_search_button"
-              >
+              <button type="submit" value="search" className="input_search_button">
                 Submit
               </button>
             </form>
@@ -150,11 +126,7 @@ class Landing extends Component {
               <h1>Play with like-minded players.</h1>
             </Col>
             <Col main_body_text>
-              <img
-                src={serrowpng}
-                className="brainlet_img_main serrow_fix"
-                alt="LFG Player"
-              />
+              <img src={serrowpng} className="brainlet_img_main serrow_fix" alt="LFG Player" />
               <h1>
                 "Yeah man I'm 2400 Legion" <span>(2 Star Rating)</span>
               </h1>
@@ -162,11 +134,7 @@ class Landing extends Component {
           </Row>
           <Row main_body_text>
             <Col main_body_text>
-              <img
-                src={serrow}
-                className="brainlet_img_main"
-                alt="LFG Player"
-              />
+              <img src={serrow} className="brainlet_img_main" alt="LFG Player" />
               <h1>
                 "Duelist exp" <span>(4.7 Star Rating)</span>
               </h1>

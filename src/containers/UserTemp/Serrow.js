@@ -9,10 +9,7 @@ const UserDisplay = props => {
   return (
     <Fragment>
       <Navigation />
-      <Row
-        user_row
-        image="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg"
-      >
+      <Row user_row image="https://render-us.worldofwarcraft.com/character/malganis/124/168002428-main.jpg">
         <Col user_information>
           <h1>Serrow</h1>
           <h2>Mal'Ganis</h2>
