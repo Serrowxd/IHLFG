@@ -10,6 +10,8 @@ Cuts down on load times & gives a local resource to pull from.
 
 Upvote & Downvote on profiles + the ability to leave comments (when signed in and verified). Possibly rating based? If you're not within 200 points of the person you're commenting (or above) you will be blocked from rating the player.
 
+Searching for a player will pull up a list of possible results based on what the database query returns. Each player route will be dynamically created based on `/player/:id` where player id is the `charactername-realm` -- this will use props that are rendered based on componentWillMount which performs a get request, the information passed to the get request will be dynamically input based on the route used `/player/:id` will return all the information from `id` and pass it to the component via state.
+
 # Small Notes
 
 https://www.npmjs.com/package/query-string
