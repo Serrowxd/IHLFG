@@ -4,6 +4,8 @@ I hate LFG!
 
 Obviously nobody's going to be reading this yet, so I'm going to utilize the space as storage for personal development notes.
 
+[Server](https://github.com/Serrowxd/IHLFG_Server)
+
 # Notes
 
 Rather than pulling directly from the API when searching for the player information - search dynamically when updating the character profile, then save the information to a database.
