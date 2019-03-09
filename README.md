@@ -22,6 +22,12 @@ Disregarding what I said above, in terms of the player search, what if we were t
 
 In this sense all the logic would be handled in the server itself, rather than by the front-end code. We'd really just be rendering the information at that point as it came back from the server. **Do more research into this.**
 
+# Homepage Refactor Notes
+
+Going to be drawing a lot of design inspiration from this website -- https://nexushub.co/warframe
+
+The homepage will host the a leaderboard (2's, 3's, RBG's) as well as the most recent patch notes. There will be a player search option, and the banner image will need to be a lot smaller than it is right now. Log-in isn't going to be supported in the initial release so we'll leave those buttons out of the navigation for the time being. The only functionality the page will have on launch is an updated ladder, most recent patch notes fetched automatically, and a dynamic player search.
+
 # Small Notes
 
 https://www.npmjs.com/package/query-string
